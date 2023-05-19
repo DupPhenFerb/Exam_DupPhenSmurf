@@ -30,7 +30,7 @@
 				<label for = "password"> Repeat password:  </label>
 				<input type = "password" name = "repeatPassword" class = "form-control" placeholder = "Repeat Password " ng-model = "repeatPassword" ng-changed="checkPassword()"required>
             </div>
-            <span ng-show="passwordMustBeEqual" style="color: red;">Password must be equal</span>
+            <span ng-show="passwordMustBeEqual ==false" style="color: red;">Password must be equal</span>
 			<br>
 			<!-- <input type="button" class="btn btn-primary" ng-click="sumitForm()" value = "Submit"> -->
             <button ng-click="submitForm()">Register</button>
