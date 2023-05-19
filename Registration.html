@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Starter</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  </head>
+<body>
+	<div ng-app = "myApp" class = "container" style="width: 600px" ng-controller = "myCtrl">
+	  <div style="text-align:center;color:#81993a">
+		<p><b>Registation Site</b></p>
+	  </div>
+		<div > 
+		  <form role = "form" class="well" ng-hide="ifShowUser"name="registrationForm">
+			<div class = "form-group">
+				<label for = "name"> Name:  </label>
+				<input type = "text" name = "name" class = "form-control" placeholder = "Enter Name " ng-model = "name"required>
+			</div>
+			<div class = "form-group">
+				<label for = "email"> Email:  </label>
+				<input type = "email" name = "email" class = "form-control" placeholder = "Enter Email " ng-model = "email" required>
+			</div>
+			<div class = "form-group">
+				<label for = "password"> Password:  </label>
+				<input type = "password" name = "password" class = "form-control" placeholder = "Enter Password " ng-model = "password" required>
+			</div>
+			<div class = "form-group">
+				<label for = "password"> Repeat password:  </label>
+				<input type = "password" name = "repeatPassword" class = "form-control" placeholder = "Repeat Password " ng-model = "repeatPassword" ng-changed="checkPassword()"required>
+            </div>
+            <span ng-show="passwordMustBeEqual" style="color: red;">Password must be equal</span>
+			<br>
+			<!-- <input type="button" class="btn btn-primary" ng-click="sumitForm()" value = "Submit"> -->
+            <button ng-click="submitForm()">Register</button>
+            <button ng-click="redirectToLogin()">Cancel</button>
+		    </div>
+            </form>
+		  </div>
+		</div>
+	</div>
+    <script type="module" src="Regapp.js"></script>
+</body>
+</html>
